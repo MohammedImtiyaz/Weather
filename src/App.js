@@ -23,9 +23,15 @@ function App() {
         });
     }
   };
+let convert = function (farhen) {
+  return Math.round((farhen-273).toFixed(2));
+}
+
+
+
 
   const dateBuilder = function () {
-    return new Date().toISOString();
+    return new Date().toDateString();
   };
   return (
     <div className="App">
@@ -41,15 +47,17 @@ function App() {
               onKeyPress={search}
             />
           </div>
-          {(typeof weather.main !=='undefined') ?  (<div><div className="location-box">
-            <div className="location-name">{weather.name} , {weather.sys.country}</div>
-            <div className="location-date">{dateBuilder()}</div>
-          </div>
-          <div className="weather-box">
-            <div className="weather-temp">{Math.round(weather.main.temp)} O F</div>
-            <div className="weather">{weather.weather[0].main}</div>
+          <div className="box">
+            {(typeof weather.main !=='undefined') ?  (<div><div className="location-box">
+              <div className="location-name">{weather.name} , {weather.sys.country}</div>
+               <div className="location-date">{dateBuilder()}</div>
+              </div>
+            <div className="weather-box">
+              <div className="weather-temp">{convert(weather.main.temp)} °C</div>
+             {/* <div className="weather">{weather.weather[0].main}</div> */}
+           
           </div></div> ) : ('')}
-         
+          </div> 
         </main>
       </div>
     </div>

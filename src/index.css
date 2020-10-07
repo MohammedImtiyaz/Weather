@@ -17,6 +17,7 @@ font-size: 24px;
 outline:none;
 background-color: rgba(255,255,255,0.7);
 border-radius: 16px;
+border: 0;
 }
 
 body{
@@ -51,18 +52,36 @@ main{
 }
 
 .weather-box{
-  background-color: rgba(255,255,255,0.7);
-  margin-top: 30px;
-    display: inline-block;
-    border-radius: 0px 0px 16px 16px rgba(0 0 0 0.2);
-    border: 3px solid;
-    padding: 20px;
+  background-color:rgba(177,218,242,0.5);
+  margin-top:  30px ;
+  display: inline-block;
+  border-radius: 40px;
+  border: 1px solid blue;
+  padding: 15px;
 
 }
 
 .weather-temp{
   text-shadow: 3px 3px rgba(255,255,255,0.4);
+ 
 }
-.weather{
-
+.box{
+  display:flex;
+  justify-content: center;
+ 
+  
+}
+.location-date{
+  font-size: medium;
+  font-weight: bolder;
+  background-color:rgba(177,218,242,0.5);
+  padding:10px
+}
+.location-name{
+  font-size:50px;
+  background-color:rgba(177,218,242,0.5);
+  display: inline-block;
+  border-radius: 20px;
+ 
+  padding:15px;
 }
